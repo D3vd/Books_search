@@ -18,15 +18,11 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/search', (req, res) => {
-  let search = req.query.search;
-  res.render('search', { search });
-});
-
 // Set Static Folder
 app.use(express.static(path.join(__dirname, './public')));
 
-// Routes - API
+// Routes
+app.use('/search', require('./routes/search'));
 app.use('/api', require('./routes/api'));
 
 // Initialize MongoDB

@@ -42,3 +42,36 @@ body {
   padding: 0 20px;
   background-color: #fff;
 }
+
+.search {
+  color: #fff;
+  margin: 80px 20px;
+}
+
+.list {
+  margin: 30px 50px;
+}
+
+.item {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+.item a {
+  text-decoration: none;
+  color: #111;
+}
+
+.item h1,
+h2 {
+  background-color: #fff;
+}
+
+.item h2 {
+  color: #11111180;
+}

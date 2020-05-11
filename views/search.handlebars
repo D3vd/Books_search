@@ -1,1 +1,10 @@
-<h1>{{search}}</h1>
+<div class="search">
+  <h1>Showing Results for "{{book}}"</h1>
+  <div class="list">
+    {{#each results}}
+    <div class="item">
+      {{{this}}}
+    </div>
+    {{/each}}
+  </div>
+</div>
