@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, './public')));
 
 // Routes
 app.use('/search', require('./routes/search'));
+app.use('/book', require('./routes/book'));
 app.use('/api', require('./routes/api'));
 
 // Initialize MongoDB
