@@ -1,4 +1,16 @@
 <div class="book">
-  <h1>{{title}}</h1>
+  <div class="image">
+    <img src={{image}} alt={{title}}>
+  </div>
+  <div class="details">
+    <h1>{{title}} ({{year}})</h1>
+    <h2>by {{author}}</h2>
+    <p>{{{description}}}</p>
+
+    <div>
+      <a href='/'> Search for another book</a>
+      <a href={{url}} class="link" target="_blank">Goodreads &rarr;</a>
+    </div>
+  </div>
 
 </div>

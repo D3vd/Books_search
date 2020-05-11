@@ -20,7 +20,7 @@ body {
 
 .main-title {
   text-align: center;
-  font-size: 50px;
+  font-size: 60px;
   color: #fff;
 }
 
@@ -32,8 +32,14 @@ body {
 
 .query {
   width: 60%;
-  height: 35px;
   background-color: #fff;
+  font-size: 25px;
+  padding: 10px;
+  border: none;
+}
+
+.query:focus {
+  border: none;
 }
 
 .submit {
@@ -41,6 +47,12 @@ body {
   font-family: 'Montserrat', sans-serif;
   padding: 0 20px;
   background-color: #fff;
+  font-weight: 600;
+  border: none;
+}
+
+.submit:hover {
+  cursor: pointer;
 }
 
 .search {
@@ -68,10 +80,48 @@ body {
 }
 
 .item h1,
-h2 {
+.item h2 {
   background-color: #fff;
 }
 
 .item h2 {
   color: #11111180;
+}
+
+.book {
+  display: flex;
+  color: #fff;
+  margin: 100px 20px;
+}
+
+.details {
+  padding: 0px 40px;
+}
+
+.image img {
+  width: 200px;
+}
+
+.details p {
+  margin-top: 20px;
+}
+
+.details > div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.details a {
+  text-decoration: none;
+  color: #111;
+  background-color: #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: transform 0.2s;
+}
+
+.details a:hover {
+  transform: scale(1.1);
 }
