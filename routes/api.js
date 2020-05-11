@@ -7,7 +7,7 @@ router.get('/', (_, res) => {
   res.status(404).send('Invalid Route. Please check your request');
 });
 
-router.get('/all', async (_, res) => {
+router.get('/books', async (_, res) => {
   let books = await Books.getAll();
 
   if (books === null || books.length === 0) {
@@ -19,6 +19,22 @@ router.get('/all', async (_, res) => {
   }
 
   res.status(200).json({ books });
+});
+
+router.get('/book/:id', async (req, res) => {
+  let id = req.params.id;
+
+  let book = await Books.getByID(id);
+
+  if (book === null) {
+    res.status(400).json({
+      code: 400,
+      message: `Unable to find book with ID: ${id}`,
+    });
+    return;
+  }
+
+  res.status(200).json({ book });
 });
 
 module.exports = router;
